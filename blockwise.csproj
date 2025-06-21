@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.18362.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+	<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>img\fp.ico</ApplicationIcon>
+    <StartupObject></StartupObject>
+    <NuGetAudit>True</NuGetAudit>
+	<Platforms>AnyCPU;x64</Platforms>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <RepositoryUrl>https://github.com/digitalsleuth/blockwise</RepositoryUrl>
+    <Title>blockwise</Title>
+    <Authors>Corey Forman (digitalsleuth)</Authors>
+    <Company>digitalsleuth</Company>
+    <Copyright>Corey Forman (digitalsleuth)</Copyright>
+    <PackageProjectUrl>https://github.com/digitalsleuth/blockwise</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>blockwise;digitalsleuth</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<Optimize>False</Optimize>
+		<DebugType>full</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<Optimize>False</Optimize>
+		<DebugType>full</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DebugType>full</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<DebugType>full</DebugType>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="img\fp.ico" />
+  </ItemGroup>
+
+</Project>
